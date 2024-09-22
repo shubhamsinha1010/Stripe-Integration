@@ -9,13 +9,12 @@ $ python3 -m venv venv && source venv/bin/activate
 Install the requirements:
 
 (venv)$ pip install -r requirements.txt
-Add your Stripe test secret and publishable keys as environment variables like so:
+Create a .env file with the following data
 
-(venv)$ export STRIPE_PUBLISHABLE_KEY=<YOUR_STRIPE_PUBLISHABLE_KEY>
-(venv)$ export STRIPE_SECRET_KEY=<YOUR_STRIPE_SECRET_KEY>
-In case you're planning to confirm payments using webhooks you also need to add the webhook endpoint environment variable as well:
+STRIPE_PUBLISHABLE_KEY=<YOUR_STRIPE_PUBLISHABLE_KEY>
+STRIPE_SECRET_KEY=<YOUR_STRIPE_SECRET_KEY>
+STRIPE_ENDPOINT_SECRET=<YOUR_ENDPOINT_SECRET_KEY>
 
-(env)$ export STRIPE_ENDPOINT_SECRET=<YOUR_ENDPOINT_SECRET_KEY>
 Run the server:
 
 (venv)$ FLASK_ENV=development python app.py
